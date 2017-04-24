@@ -16,7 +16,7 @@ and open the template in the editor.
           width:400px;
           height:350px;
 
-          background-image:url('Photos/DimeBagDeanGuitar.png');
+          background-image:url('Photos/RandyRhoadsGuitar.jpg');
           background-repeat:no-repeat;
 
         }
@@ -28,14 +28,14 @@ and open the template in the editor.
         element.style.display = "inline-block";
         var img = document.getElementById("imgZoom");
         
-        var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
-        var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
+        var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetWidth;
+        var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetHeight;
         
         var posXElement = document.getElementById("posX");
         posXElement.style.display = "block"
         var posYElement = document.getElementById("posY");
         posYElement.style.display = "block"
-        element.style.backgroundPosition=(-posX)+"px "+(-posY)+"px";
+        element.style.backgroundPosition=(-posX*2)+"px "+(-posY*2)+"px";
 
         }
 
@@ -59,36 +59,24 @@ and open the template in the editor.
         <hr>
 
         <br>
-        <div class="guitartitle">Dimebag Darrell's Dean "ML from Hell" - $9,000 </div>
+        <div class="guitartitle">Randy Rhoads' Flying V - $13,000 </div>
         
         
-        <img id="imgZoom" width="400" height="350" onmousemove="zoomIn(event)" onmouseout="zoomOut()" src="Photos/DimeBagDeanGuitar.png">
+        <img id="imgZoom" width="400" height="350" onmousemove="zoomIn(event)" onmouseout="zoomOut()" src="Photos/RandyRhoadsGuitar.jpg">
         <div id="overlay" style = "display: inline-block;" onmousemove="zoomIn(event)"></div>
         <p id="posX" style="display: none">
         <p id="posY" style="display: none">
             
             
         <p class="guitartext">
-            Item ID: 0001
+            Item ID: 0006
         </p>
         <hr>
         <p class="guitartext">
-            Darrell's first guitar was a Les Paul copy by Hondo, 
-            and he began playing Dean Guitars in the early 1980s. 
-            His father bought him a cherry sunburst 1979 Dean ML in 
-            1981 and later that day he won a burgundy ML in a guitar 
-            competition. He later sold this guitar to purchase a car. 
-            The guitar was subsequently heavily customized; the neck 
-            was re-shaped, a lightning bolt paint job was applied and 
-            a Floyd Rose tremolo system was installed. This guitar was 
-            later returned to Darrell as a gift, and became known as the 
-            "Dean From Hell," which he used from 1988 until 1994. He also 
-            played a sunburst ML customized to his own specs on Vulgar 
-            Display of Power and Far Beyond Driven. When Dean temporarily 
-            closed down, he collaborated with Washburn to recreate the ML 
-            body style. When the Washburn contract ended, he made arrangements 
-            to be the sole endorsee of the re-opened Dean. Darrell's death came 
-            shortly before the Dean contract was set to begin.
+            Ozzy Osbourne's post-Black Sabbath career wouldn't have started 
+            quite so well if it weren't for Randy Rhoads, whose image was 
+            closely associated with his polka-dot Flying V guitar, made by 
+            luthier Karl Sandoval.
         </p>
         <hr>
         <br>
@@ -97,5 +85,3 @@ and open the template in the editor.
         
     </body>
 </html>
-
-

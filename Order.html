@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Jake Williams, 58156622, INF 124 -->
+<html>
+    <head>
+        <title>Axemania.com</title>
+        <link rel = "stylesheet" type="text/css" href="homeformatting.css">
+     
+        
+        
+        
+        
+        <script>
+            function validateForm() {
+                var firstName = document.forms["myForm"]["fname"].value;
+                var lastName = document.forms["myForm"]["lname"].value;
+                var itemID = document.forms["myForm"]["itemid"].value;
+                var Quantity = document.forms["myForm"]["qname"].value;
+                var phoneNum = document.forms["myForm"]["phone"].value;
+                var cardNum = document.forms["myForm"]["cardnum"].value;
+                
+                if (firstName == "") {
+                    alert("First name must be filled out");
+                    return false;
+                }
+                if (lastName == "") {
+                    alert("Last name must be filled out");
+                    return false;
+                }
+                if (isNaN(itemID)) {
+                    alert("Quantity field is incorrect");
+                    return false;
+                }
+                if (isNaN(Quantity)) {
+                    alert("Quantity field is incorrect");
+                    return false;
+                }
+                if (isNaN(phoneNum)) {
+                    alert("Phone Number field is incorrect");
+                    return false;
+                }
+                if (isNaN(cardNum)) {
+                    alert("Credit Card Number field is incorrect");
+                    return false;
+                }
+                
+            }
+        </script>
+        
+        
+    </head>
+    <body>
+        
+        <img class="toplogo" src="Photos/AxemaniaLogo.jpg" width="750" height="150">
+
+        <hr> 
+        <h3><a href=index.html>HOME</a> | 
+            <a href=AboutUs.html>ABOUT US</a> | 
+            <a href=Order.html>ORDER</a> 
+        </h3>
+        <hr>
+        
+        
+        
+
+        <div class='orderinfo'>
+            Place your order by filling out the information below!
+        </div><br>
+        
+        
+        
+        <form name="myForm" action="mailto:panteater@uci.edu?subject=Order Place" 
+	onsubmit="return validateForm()" method="post">
+    
+            First Name: <input type="text" name="fname" required>
+            <br><br>
+            Last Name: <input type="text" name="lname" required>
+            <br><br>
+            Item ID: <input type="text" name="itemid" required>
+            <br><br>
+            Quantity: <input type="text" name="qname" required>
+            <br><br>
+            Phone Number: <input type="text" name="phone" required>
+            <br><br>
+            Credit Card Number: <input type="text" name="cardnum" required>
+            <br><br>
+            Shipping Address: <input type="text" name="shipadd" required>
+            <br><br>
+            Shipping Method: 
+                <select>
+                    <option>6-days Ground</option>
+                    <option>2-days Expidited</option>
+                    <option>Premium Overnight</option>
+                </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+ 
+    </body>
+</html>
